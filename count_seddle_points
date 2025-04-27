@@ -2,13 +2,13 @@ matrix = [[0, 0], [0, 0]]
 n = 2
 m = 2
 
-    # 1. Находим минимумы для каждой строки → O(n × m)
+# 1. Находим минимумы для каждой строки → O(n × m)
 row_minima = [min(row) for row in matrix]
     
-    # 2. Находим максимумы для каждого столбца → O(n × m)
+# 2. Находим максимумы для каждого столбца → O(n × m)
 column_maxima = [max(matrix[i][j] for i in range(n)) for j in range(m)]
     
-    # 3. Считаем седловые точки → O(n × m)
+# 3. Считаем седловые точки → O(n × m)
 count = 0
 for i in range(n):
     for j in range(m):
